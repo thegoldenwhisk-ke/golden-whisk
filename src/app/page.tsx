@@ -15,7 +15,7 @@ function WhiskIcon({ className = "w-5 h-5" }: { className?: string }) {
       strokeLinejoin="round"
       className={className}
     >
-      <line x1="12" y1="2" x2="12" y2="7" />
+      <line x1="12" y1="2" x2="7" y2="7" />
       <line x1="10" y1="7" x2="14" y2="7" />
       <path d="M12 7C8.5 10 7.5 15.5 8.5 19C9.2 21.5 14.8 21.5 15.5 19C16.5 15.5 15.5 10 12 7Z" />
       <path d="M12 7C10 10.5 9.5 15 10.5 19.5" />
@@ -109,7 +109,7 @@ export default function Home() {
         </div>
 
         {/* Hero Featured Showcase: Themed Birthday Cake */}
-        <div className="relative max-w-4xl mx-auto rounded-3xl overflow-hidden border border-stone-200/90 shadow-2xl bg-white p-3 md:p-4 text-left">
+        <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden border border-stone-200/90 shadow-xl bg-white p-4 md:p-5 text-left">
           <div className="relative aspect-[16/10] md:aspect-[21/11] rounded-2xl overflow-hidden bg-stone-100">
             <Image
               src="/images/themed-birthday-cake.jpg"
@@ -119,17 +119,17 @@ export default function Home() {
               className="object-cover object-center hover:scale-105 transition duration-700"
               onError={(e) => { (e.currentTarget as HTMLElement).style.display = 'none'; }}
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-stone-950/80 via-stone-950/20 to-transparent flex flex-col justify-end p-6 md:p-8 text-white">
-              <span className="text-xs uppercase tracking-widest text-amber-300 font-bold mb-1">
-                Signature Feature Piece
-              </span>
-              <h2 className="text-2xl md:text-3xl font-serif text-white leading-tight">
-                Custom Themed Celebration Art
-              </h2>
-              <p className="text-stone-300 text-xs md:text-sm mt-1 max-w-xl">
-                Intricate storytelling and sculpted edible artistry designed individually around your milestone theme.
-              </p>
-            </div>
+          </div>
+          <div className="pt-5 px-1">
+            <span className="text-xs uppercase tracking-wider text-amber-700 font-bold">
+              Signature Feature Piece
+            </span>
+            <h2 className="text-2xl md:text-3xl font-serif text-stone-900 mt-1 leading-tight">
+              Custom Themed Celebration Art
+            </h2>
+            <p className="text-stone-600 text-sm md:text-base mt-2 leading-relaxed">
+              Intricate storytelling and sculpted edible artistry designed individually around your milestone theme.
+            </p>
           </div>
         </div>
       </section>
