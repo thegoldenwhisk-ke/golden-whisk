@@ -25,7 +25,7 @@ function WhiskIcon({ className = "w-5 h-5" }: { className?: string }) {
 }
 
 export default function Home() {
-  const WHATSAPP_NUMBER = "254707647789"; 
+  const WHATSAPP_NUMBER = "254707674789"; 
 
   const whatsappConsultUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     "Hello Sarah, I would like to inquire about booking a bespoke cake with The Golden Whisk."
