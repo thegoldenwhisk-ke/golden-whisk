@@ -179,7 +179,7 @@ export default function Home() {
             <div className="pt-4">
               <span className="text-xs uppercase tracking-wider text-amber-700 font-semibold">Grand Celebrations</span>
               <h3 className="font-serif text-xl mt-1">Botanical Wedding Tiers</h3>
-              <p className="text-stone-500 text-sm mt-1">Multi-tier ridged buttercream adorned with cascading greenery, baby's breath, and bespoke gift boxes.</p>
+              <p className="text-stone-500 text-sm mt-1">Multi-tier ridged buttercream adorned with cascading greenery, baby&apos;s breath, and bespoke gift boxes.</p>
             </div>
           </div>
 
