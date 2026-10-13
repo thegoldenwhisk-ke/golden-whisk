@@ -4,26 +4,6 @@ import React from 'react';
 import Image from 'next/image';
 import { Sparkles, Phone, ChevronRight, Clock, MapPin, Heart } from 'lucide-react';
 
-function WhiskIcon({ className = "w-5 h-5" }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="1.75"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      className={className}
-    >
-      <line x1="12" y1="2" x2="7" y2="7" />
-      <line x1="10" y1="7" x2="14" y2="7" />
-      <path d="M12 7C8.5 10 7.5 15.5 8.5 19C9.2 21.5 14.8 21.5 15.5 19C16.5 15.5 15.5 10 12 7Z" />
-      <path d="M12 7C10 10.5 9.5 15 10.5 19.5" />
-      <path d="M12 7C14 10.5 14.5 15 13.5 19.5" />
-    </svg>
-  );
-}
-
 export default function Home() {
   const WHATSAPP_NUMBER = "254707674789"; 
 
@@ -36,16 +16,22 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 bg-[#FDFCF7]/90 backdrop-blur-md z-50 border-b border-stone-200">
         <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-          {/* Logo with Whisk Icon */}
+          {/* Logo with Sarah's Official Brand Badge */}
           <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-full bg-amber-100 border border-amber-200 flex items-center justify-center text-amber-800 shadow-sm">
-              <WhiskIcon className="w-5 h-5 -rotate-12" />
+            <div className="relative w-12 h-12 rounded-full overflow-hidden border border-amber-200/90 shadow-sm bg-white shrink-0">
+              <Image
+                src="/images/logo.png"
+                alt="The Golden Whisk Logo"
+                fill
+                className="object-cover"
+                priority
+              />
             </div>
             <div className="flex flex-col">
               <span className="text-xl md:text-2xl font-serif tracking-wider font-bold text-stone-900 leading-tight">
                 THE GOLDEN WHISK
               </span>
-              <span className="text-[10px] tracking-widest uppercase text-amber-700 font-medium">
+              <span className="text-[10px] tracking-widest uppercase text-amber-700 font-semibold">
                 Atelier & Cake Studio
               </span>
             </div>
@@ -81,7 +67,7 @@ export default function Home() {
       <section className="pt-36 pb-12 px-6 max-w-5xl mx-auto text-center">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-semibold uppercase tracking-wider mb-6">
           <Sparkles className="w-3.5 h-3.5" />
-          A Little Luxury in Every Bite
+          A Taste of Luxury in Every Bite
         </div>
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-serif font-light tracking-tight text-stone-900 leading-[1.1] mb-6">
           Sculpted for your <br />
@@ -286,7 +272,19 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-stone-200 text-center text-stone-500 text-xs">
-        <p className="font-serif text-sm font-semibold text-stone-800">THE GOLDEN WHISK CAKE ATELIER</p>
+        <div className="flex items-center justify-center gap-3 mb-3">
+          <div className="relative w-8 h-8 rounded-full overflow-hidden border border-amber-200 shadow-sm bg-white shrink-0">
+            <Image
+              src="/images/logo.png"
+              alt="The Golden Whisk"
+              fill
+              className="object-cover"
+            />
+          </div>
+          <p className="font-serif text-sm font-semibold text-stone-800 tracking-wider">
+            THE GOLDEN WHISK CAKE ATELIER
+          </p>
+        </div>
         <p className="mt-1">Kerarapon Drive, Karen, Nairobi, Kenya</p>
         <p className="mt-4 text-stone-400">© {new Date().getFullYear()} The Golden Whisk. All rights reserved.</p>
       </footer>
