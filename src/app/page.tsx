@@ -16,24 +16,40 @@ export default function Home() {
       {/* Navigation */}
       <nav className="fixed top-0 left-0 right-0 bg-[#FDFCF7]/90 backdrop-blur-md z-50 border-b border-stone-200">
         <div className="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
-          {/* Logo with Sarah's Official Brand Badge */}
+          {/* Responsive Brand Signature */}
           <div className="flex items-center gap-3">
-            <div className="relative w-12 h-12 rounded-full overflow-hidden border border-amber-200/90 shadow-sm bg-white shrink-0">
+            {/* Whisk Mark Icon */}
+            <div className="relative w-11 h-11 md:w-14 md:h-14 shrink-0">
               <Image
                 src="/images/logo.png"
-                alt="The Golden Whisk Logo"
+                alt="The Golden Whisk"
                 fill
-                className="object-cover"
+                className="object-contain"
                 priority
               />
             </div>
-            <div className="flex flex-col">
-              <span className="text-xl md:text-2xl font-serif tracking-wider font-bold text-stone-900 leading-tight">
+
+            {/* Mobile View: Clean high-contrast typography */}
+            <div className="flex flex-col md:hidden">
+              <span className="text-base font-serif tracking-wider font-bold text-stone-900 leading-none">
                 THE GOLDEN WHISK
               </span>
-              <span className="text-[10px] tracking-widest uppercase text-amber-700 font-semibold">
-                Atelier & Cake Studio
+              <span className="text-[9px] tracking-widest uppercase text-amber-700 font-semibold mt-0.5">
+                Atelier Karen
               </span>
+            </div>
+
+            {/* Desktop / Tablet View: Custom 3D Gold Script */}
+            <div className="hidden md:flex flex-col justify-center">
+              <div className="relative h-12 w-56 lg:w-64">
+                <Image
+                  src="/images/logo-text.png"
+                  alt="The Golden Whisk"
+                  fill
+                  className="object-contain object-left"
+                  priority
+                />
+              </div>
             </div>
           </div>
 
@@ -94,7 +110,7 @@ export default function Home() {
           </a>
         </div>
 
-        {/* Hero Featured Showcase: Themed Birthday Cake */}
+        {/* Hero Featured Showcase */}
         <div className="max-w-4xl mx-auto rounded-3xl overflow-hidden border border-stone-200/90 shadow-xl bg-white p-4 md:p-5 text-left">
           <div className="relative aspect-[16/10] md:aspect-[21/11] rounded-2xl overflow-hidden bg-stone-100">
             <Image
@@ -273,12 +289,12 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-stone-200 text-center text-stone-500 text-xs">
         <div className="flex items-center justify-center gap-3 mb-3">
-          <div className="relative w-8 h-8 rounded-full overflow-hidden border border-amber-200 shadow-sm bg-white shrink-0">
+          <div className="relative w-8 h-8 shrink-0">
             <Image
               src="/images/logo.png"
               alt="The Golden Whisk"
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
           <p className="font-serif text-sm font-semibold text-stone-800 tracking-wider">
